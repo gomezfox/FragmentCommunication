@@ -11,11 +11,9 @@ import android.view.ViewGroup;
 
 
 public class SimpleFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
 
     private ItemFragment.OnFragmentInteractionListener mListener;
@@ -53,9 +51,10 @@ public class SimpleFragment extends Fragment {
         // Inflate the layout for this fragment
         View myView =  inflater.inflate(R.layout.fragment_simple, container, false);
 
-        //TODO: Set the resultsTextView to display the string with the position number passed by the bundle
+        //TODO: Set the resultsTextView to display the string with the position number passed by the bundle and stored in param1
+        //(HINT: myView has a findViewById() method that can retrieve a copy of the TextView
 
-        // return the final view
+        // returns the final view
         return myView;
     }
 

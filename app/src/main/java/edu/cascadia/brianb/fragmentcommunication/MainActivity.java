@@ -11,7 +11,9 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //TODO: Use the fragment transaction manager to add the item fragment to the fragment container
+        //TODO: Add the ItemFragment to the Activity layout's fragment container
+        // HINT: Use the getFragmentManager to begin a transaction, add, and commit
+
     }
 
     //TODO: Implement the method 'onFragmentInteraction' to creates a new SimpleFragment using its FragmentFactory method 'newInstance'
