@@ -16,11 +16,7 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
-<<<<<<< HEAD
-
-=======
         google()
->>>>>>> c60964d... updated gradle
     }
 }
 

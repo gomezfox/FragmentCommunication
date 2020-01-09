@@ -1,10 +1,10 @@
 package edu.cascadia.brianb.fragmentcommunication;
 
-import android.app.Activity;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 import android.os.Bundle;
 
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 //TODO: require the Activity to implement the interface 'OnFragmentInteractionListener'
 
     @Override
@@ -16,6 +16,7 @@ public class MainActivity extends Activity {
 
     }
 
-    //TODO: Implement the method 'onFragmentInteraction' to creates a new SimpleFragment using its FragmentFactory method 'newInstance'
+    //TODO: Implement the method 'onFragmentInteraction' to creates a new SimpleFragment
+    //      using its FragmentFactory method 'newInstance'
 
 }

@@ -1,6 +1,6 @@
 package edu.cascadia.brianb.fragmentcommunication;
 
-import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.app.ListFragment;
 import android.view.View;
@@ -24,10 +24,6 @@ public class ItemFragment extends ListFragment {
      * fragment to allow an interaction in this fragment to be communicated
      * to the activity and potentially other fragments contained in that
      * activity.
-     * <p/>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
      */
     public interface OnFragmentInteractionListener {
         public void onFragmentInteraction(String id);
@@ -51,12 +47,12 @@ public class ItemFragment extends ListFragment {
 
 
     @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
+    public void onAttach(Context context) {
+        super.onAttach(context);
         try {
-            mListener = (OnFragmentInteractionListener) activity;
+            mListener = (OnFragmentInteractionListener) context;
         } catch (ClassCastException e) {
-            throw new ClassCastException(activity.toString()
+            throw new ClassCastException(context.toString()
                     + " must implement OnFragmentInteractionListener");
         }
     }

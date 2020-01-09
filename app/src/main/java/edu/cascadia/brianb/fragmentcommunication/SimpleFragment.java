@@ -20,7 +20,7 @@ public class SimpleFragment extends Fragment {
 
     /**
      * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
+     * this fragment with a single string parameter.
      *
      * @param param1 Parameter 1.
      * @return A new instance of fragment SimpleFragment.
@@ -48,7 +48,7 @@ public class SimpleFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
+        // Inflate the layout for this fragment AND store the resulting view in a variable myView
         View myView =  inflater.inflate(R.layout.fragment_simple, container, false);
 
         //TODO: Set the resultsTextView to display the string with the position number passed by the bundle and stored in param1
