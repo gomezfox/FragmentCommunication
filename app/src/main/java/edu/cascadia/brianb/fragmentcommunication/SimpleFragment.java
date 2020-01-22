@@ -7,7 +7,7 @@ import android.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import android.widget.TextView;
 
 
 public class SimpleFragment extends Fragment {
@@ -25,6 +25,11 @@ public class SimpleFragment extends Fragment {
      * @param param1 Parameter 1.
      * @return A new instance of fragment SimpleFragment.
      */
+
+
+
+
+    // #############   FACTORY:  SIMPLE FRAGMENT
     public static SimpleFragment newInstance(String param1) {
         SimpleFragment fragment = new SimpleFragment();
         Bundle args = new Bundle();
@@ -37,6 +42,11 @@ public class SimpleFragment extends Fragment {
         // Required empty public constructor
     }
 
+
+
+
+
+    // #############   ON CREATE:  SIMPLE FRAGMENT
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,14 +55,32 @@ public class SimpleFragment extends Fragment {
         }
     }
 
+
+
+
+
+    // #############   ON CREATE VIEW:  SIMPLE FRAGMENT
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
+
+
+
+
         // Inflate the layout for this fragment AND store the resulting view in a variable myView
         View myView =  inflater.inflate(R.layout.fragment_simple, container, false);
 
+
+
+
+
         //TODO: Set the resultsTextView to display the string with the position number passed by the bundle and stored in param1
         //(HINT: myView has a findViewById() method that can retrieve a copy of the TextView
+        TextView resultsTextView = (TextView) myView.findViewById(R.id.resultTextView);
+        if (getArguments() != null) {
+            resultsTextView.setText(Integer.toString(savedInstanceState.getInt(ARG_PARAM1)));
+        }
+
 
         // returns the final view
         return myView;

@@ -36,16 +36,20 @@ public class ItemFragment extends ListFragment {
     public ItemFragment() {
     }
 
+
+
+
+    // ############# ON CREATE
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
         setListAdapter(new ArrayAdapter<>(getActivity(),
                 android.R.layout.simple_list_item_1, android.R.id.text1, DummyContent.ITEMS));
     }
 
 
+
+    // ############# ON ATTACH
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -57,12 +61,19 @@ public class ItemFragment extends ListFragment {
         }
     }
 
+
+
+    // ############# ON DETACH
     @Override
     public void onDetach() {
         super.onDetach();
         mListener = null;
     }
 
+
+
+
+    // ############ ON LIST ITEM CLICK
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
